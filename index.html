@@ -25,20 +25,20 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="#"><i class="bi bi-android2"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar" aria-label="Boton toggle">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="./">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Intro</a>
+                            <a class="nav-link" href="#intro">Intro</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Galería</a>
@@ -47,6 +47,10 @@
                             <a class="nav-link" href="#">Qué es</a>
                         </li>
                     </ul>
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-outline-primary" onclick="location.href='app/'">Acceder
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -87,6 +91,7 @@
     </header>
 
     <main>
+        <!--sección-->
         <section id="intro" class="container py-5 my-5">
             <div class="row">
                 <div class="col-md-8">
@@ -119,10 +124,16 @@
     </main>
 
     <footer>
-
+        <p class="my-5 py-4 text-center"><strong>Copyright &copy; - Carlos Andrés Castro Jaramillo</strong></p>
     </footer>
-
+    
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+     <!--¿Cómo esconder el "#" hash de una url-->
+     <script type="text/javascript">
+        window.onhashchange = function () {
+       window.history.pushState('', document.title, window.location.pathname)
+         }
+   </script>
 </body>
 
 </html>
