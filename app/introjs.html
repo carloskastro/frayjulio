@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#0d6efd">
     <meta name="MobileOptimized" content="width">
     <meta name="HandhledFriendly" content="true">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar" content="black-traslucent">
     <!--Title and Favicon-->
     <title>Fray Julio</title>
@@ -71,7 +71,7 @@
         <section id="prueba">
             <div class="card">
                 <div class="card-header">
-                    <h1 class="display-4">Encender Bombillo</h1>
+                    <h1 class="display-6">Encender Bombillo</h1>
                 </div>
                 <div class="card-body">
                     <img src="../assets/media/off.gif" alt="Bombillo" id="imagen">
@@ -81,6 +81,23 @@
                     <button type="button" class="btn btn-secondary" onclick="document.getElementById('imagen').src='../assets/media/off.gif'">OFF</button>
                 </div>
             </div>            
+        </section>
+        <section id="prueba2">
+            <h1>Algoritmos</h1>
+            <p id="resultado"></p>
+            <script type="text/javascript">
+                //Inputs
+                const a=5;
+                const b=10;
+                //Process
+                var c=a+b;
+                //Output
+                //console.log(c);
+                //window.alert(c);
+                //document.write(c);
+                document.getElementById("resultado").innerHTML = "El resultado es " +c; 
+            </script>
+            
         </section>
 
     </main>
