@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es-CO" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8"><!-- MAnejo de los caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Responsive-->
+    <!--Favicon and title-->
+    <title>Carlos</title>
+    <link rel="icon" href="../assets/img/logo.png">
+    <!--Tags Optimized-->
+    <meta name="theme-color" content="#0d6efd">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandhledFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar" content="black-traslucent">
+    <!--SEO Tags-->
+    <meta name="author" content="Carlos Andrés Castro Jaramillo">
+    <meta name="description" content="Diseño en Bootstrap 5">
+    <meta name="keywords" content="diseño, DISEÑO, Diseño, Bootstrap, BOOTSTRAP, bootstrap">
+    <!--styles Bootstrap-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <!--styles Icons Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="container">
+<section id="js" class="py-5">
+    <h1 class="py-4">Introducción a Javascript</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <p>Javascript es un lenguaje de programación, o lo que es lo mismo, un mecanismo con el que podemos
+                decirle a nuestro navegador que tareas debe realizar, en que orden y cuantas veces (por
+                ejemplo).
+
+                Muchas de las tareas que realizamos con HTML y CSS se podrían realizar con Javascript. De hecho,
+                es muy probable que al principio nos parezca que es mucho más complicado hacerlo con Javascript,
+                y que por lo tanto no merece la pena. Sin embargo, con el tiempo veremos que Javascript nos
+                ofrece una mayor flexibilidad y un abanico de posibilidades más grande, y que bien usadas,
+                pueden ahorrarnos bastante tiempo. Miremos un ejemplo:</p>
+        </div>
+        <div class="col-md-4 text-center my-auto">
+            <img src="../assets/img/logojs.png" alt="logojs" style="width: 200px;">
+        </div>
+    </div>
+</section>
+<section class="py-5" id="test">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 class="display-6">Bombillo</h1>
+        </div>
+        <div class="card-body">
+            <img src="../assets/img/off.gif" alt="Bombillo" id="img">
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-outline-success"
+                onclick="document.getElementById('img').src='../assets/img/on.gif'">ON</button>
+            <button type="button" class="btn btn-outline-secondary"
+                onclick="document.getElementById('img').src='../assets/img/off.gif'">OFF</button>
+        </div>
+    </div>
+</section>
+<section class="py-5" id="oper">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="text-center">
+                        <h1 class="display-6">Operaciones</h1>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="num1" class="form-label">Número</label>
+                        <input class="form-control" type="text" name="num1" id="num1"
+                            placeholder="Escriba primer número">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="num2" class="form-label">Número</label>
+                        <input class="form-control" type="text" name="num2" id="num2"
+                            placeholder="Escriba segundo número">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <p class="form-label">Operación</p>
+                        <select name="oper" id="oper" class="form-select">
+                            <option value="" selected>Seleccione</option>
+                            <option value="+">Suma</option>
+                            <option value="-">Resta</option>
+                            <option value="*">Multiplicación</option>
+                            <option value="/">División</option>
+                        </select>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success btn-block" name="calcular"
+                            id="calcular">Calcular</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h1 class="display-6">Resultado</h1>
+                            <h2 id="resultado"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        //Inputs
+        document.getElementById("calcular").addEventListener('click', () =>{ 
+                //Inputs
+                const a = parseInt(document.getElementById("num1").value)
+                const b = parseInt(document.getElementById("num2").value)
+                const oper = document.getElementById("oper").value
+                //Process
+               switch (oper) {
+                case 'suma':
+                    var suma=a+b
+                    document.getElementById("resultado").innerHTML = suma;             
+                    break
+                case 'resta':
+                    var resta=a-b
+                    document.getElementById("resultado").innerHTML = resta;             
+                    break
+               
+                default:
+                    break
+               }
+        });
+        /*
+                      //Inputs
+                      document.querySelector("#calcular").addEventListener('click', () => {
+                        let a = parseInt(document.querySelector("#num1").value)
+                        let b = parseInt(document.querySelector("#num2").value)
+                        const oper = document.querySelector("#oper").value
+        
+                        switch (oper) {
+                            case 'sumar':let suma = a + b
+                                document.querySelector("#resultado").textContent = `${suma}`
+                                break
+                            case 'restar':let resta = a - b
+                                document.querySelector("#resultado").textContent = `La resta es ${resta}`
+                                break
+                        }
+                    })
+                    */
+    </script>
+</section>
+
+
+<!--Scripts Bootstrap-->
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
